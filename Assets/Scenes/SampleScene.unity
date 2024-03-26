@@ -336,7 +336,6 @@ MonoBehaviour:
   balaObj: {fileID: 4642835447882692473, guid: 83e5130d3dfc0ec4592b6a27fa7baa9a, type: 3}
   mira: {fileID: 343466537}
   vida: 0
-  explosion: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
 --- !u!70 &1277353769
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -611,7 +610,7 @@ Transform:
   m_GameObject: {fileID: 1985428859}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25846565, y: -0.2536224, z: 0}
+  m_LocalPosition: {x: 1.19, y: -0.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
