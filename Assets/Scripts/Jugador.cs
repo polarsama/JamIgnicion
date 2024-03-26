@@ -9,7 +9,7 @@ public class Jugador : MonoBehaviour
     public GameObject balaObj;
     public Transform mira;
     public float vida;
-    //public GameObject explosion;
+    public GameObject explosion;
 
 
 
@@ -32,7 +32,7 @@ public class Jugador : MonoBehaviour
 
             Destroy(collision.gameObject);
 
-            //Instantiate(explosion, collision.transform.position, collision.transform.rotation);
+            Instantiate(explosion, collision.transform.position, collision.transform.rotation);
         }
 
     }

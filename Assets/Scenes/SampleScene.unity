@@ -336,6 +336,7 @@ MonoBehaviour:
   balaObj: {fileID: 4642835447882692473, guid: 83e5130d3dfc0ec4592b6a27fa7baa9a, type: 3}
   mira: {fileID: 343466537}
   vida: 0
+  explosion: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
 --- !u!70 &1277353769
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -649,6 +650,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aebaae0a2b8bf1943b61bcf2f1d9f131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2.5
+  miTransf: {fileID: 1985428863}
+  explosion: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
