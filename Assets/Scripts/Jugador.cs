@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Jugador : MonoBehaviour
 {
@@ -10,13 +11,13 @@ public class Jugador : MonoBehaviour
     public Transform mira;
     public float vida;
     public GameObject explosion;
-
+    public Text textoVida;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        textoVida.text = vida.ToString();
     }
 
 
@@ -28,11 +29,21 @@ public class Jugador : MonoBehaviour
         {
             //Debug.Log("Te toco un enemigo");
 
-            //vida -= 10;
+            vida -= 100;
 
             Destroy(collision.gameObject);
 
             Instantiate(explosion, collision.transform.position, collision.transform.rotation);
+
+        }
+
+        if (collision.gameObject)
+        {
+            Destroy(collision.gameObject);
+
+            Instantiate(explosion, collision.transform.position, collision.transform.rotation);
+
+            
         }
 
     }
@@ -52,15 +63,6 @@ public class Jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKey(KeyCode.D))
-        //{
-        //    mitransf.position += new Vector3(1f, 0, 0) * Time.deltaTime * speed;
-        //}
-
-        //if (Input.GetKey(KeyCode.A))
-        //{
-        //    mitransf.position -= new Vector3(1f, 0, 0) * Time.deltaTime * speed;
-        //}
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -76,6 +78,9 @@ public class Jugador : MonoBehaviour
         {
             Instantiate(balaObj, mira.position, mira.localRotation);
         }
+
+        textoVida.text = vida.ToString();
+
 
     }
 }
