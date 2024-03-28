@@ -31,8 +31,6 @@ public class Bala : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemigo")
         {
-            //Debug.Log("Te toco un enemigo");
-
             Destroy(collision.gameObject);
 
             Instantiate(explosion, collision.transform.position, collision.transform.rotation);
