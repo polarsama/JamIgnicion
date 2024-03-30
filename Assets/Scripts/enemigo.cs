@@ -31,7 +31,15 @@ public class scri : MonoBehaviour
         if (collision.gameObject.tag == "Bala")
         {
             Destroy(collision.gameObject);
-        }               
+        }
 
+        if (collision.gameObject.tag == "Jugador")
+        {
+
+            Destroy(collision.gameObject);
+
+            Instantiate(explosion, collision.transform.position, collision.transform.rotation);
+
+        }
     }
 }

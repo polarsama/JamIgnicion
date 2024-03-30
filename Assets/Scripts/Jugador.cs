@@ -27,23 +27,11 @@ public class Jugador : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemigo")
         {
-            //Debug.Log("Te toco un enemigo");
-
-            vida -= 100;
 
             Destroy(collision.gameObject);
 
             Instantiate(explosion, collision.transform.position, collision.transform.rotation);
 
-        }
-
-        if (collision.gameObject)
-        {
-            Destroy(collision.gameObject);
-
-            Instantiate(explosion, collision.transform.position, collision.transform.rotation);
-
-            
         }
 
     }
@@ -64,6 +52,9 @@ public class Jugador : MonoBehaviour
     void Update()
     {
 
+
+        textoVida.text = vida.ToString();
+
         if (Input.GetKey(KeyCode.W))
         {
             mitransf.position += new Vector3(0, 1f, 0) * Time.deltaTime * speed;
@@ -79,7 +70,7 @@ public class Jugador : MonoBehaviour
             Instantiate(balaObj, mira.position, mira.localRotation);
         }
 
-        textoVida.text = vida.ToString();
+        
 
 
     }
