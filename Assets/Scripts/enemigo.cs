@@ -5,9 +5,9 @@ using UnityEngine;
 public class scri : MonoBehaviour
 {
 
-    public float speed;
-    public Transform miTransf;
-    public GameObject explosion;
+    [SerializeField] private float speed;
+    [SerializeField] private Transform miTransf;
+    [SerializeField] private GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {

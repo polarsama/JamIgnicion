@@ -5,18 +5,23 @@ using UnityEngine.UI;
 
 public class Jugador : MonoBehaviour
 {
-    public Transform mitransf;
-    public float speed;
-    public GameObject balaObj;
-    public Transform mira;
-    public float vida;
-    public GameObject explosion;
-    public Text textoVida;
+
+    [SerializeField] private Transform mitransf;
+    [SerializeField] private float speed;
+    [SerializeField] private GameObject balaObj;
+    [SerializeField] private Transform mira;
+    [SerializeField] private float vida;
+    [SerializeField] private GameObject explosion;
+    [SerializeField] private Text textoVida;
+
+    private Rigidbody2D rb;
+    private Vector2 moveInput;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();   
         textoVida.text = vida.ToString();
     }
 
@@ -56,23 +61,18 @@ public class Jugador : MonoBehaviour
 
         textoVida.text = vida.ToString();
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            mitransf.position += new Vector3(0, 1f, 0) * Time.deltaTime * speed;
-        }
+        float moveY = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            mitransf.position -= new Vector3(0, 1f, 0) * Time.deltaTime * speed;
-        }
+        moveInput = new Vector2(0,moveY);
 
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(balaObj, mira.position, mira.localRotation);
         }
+    }
 
-        
-
-
+    private void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + moveInput * speed * Time.deltaTime);
     }
 }
