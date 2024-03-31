@@ -27,6 +27,7 @@ public class Jugador : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemigo")
         {
+            vida = 0;
 
             Destroy(collision.gameObject);
 
