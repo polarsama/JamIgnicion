@@ -56,17 +56,18 @@ public class Jugador : MonoBehaviour
 
         float moveY = Input.GetAxisRaw("Vertical");
 
-        moveInput = new Vector2(0,moveY);
+        moveInput = new Vector2(0, moveY);
 
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(balaObj, mira.position, mira.localRotation);
         }
 
-        pjAnimator.SetFloat("Vertical", moveY);
-        pjAnimator.SetFloat("speed", moveInput.sqrMagnitude);
-        Debug.Log(moveInput.sqrMagnitude);
+        pjAnimator.SetFloat("Vertical", Mathf.Abs(moveY));
+        //pjAnimator.SetFloat("speed", Mathf.Abs(moveY));
     }
+
+
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput * speed * Time.deltaTime);
