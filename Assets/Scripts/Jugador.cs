@@ -16,12 +16,14 @@ public class Jugador : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    private Animator pjAnimator;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();   
+        rb = GetComponent<Rigidbody2D>();
+        pjAnimator = GetComponent<Animator>();
         textoVida.text = vida.ToString();
     }
 
@@ -41,23 +43,14 @@ public class Jugador : MonoBehaviour
         }
 
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-
-    }
     private void OnCollisionExit2D(Collision2D collision)
     {
 
     }
 
-
-
-
-
     // Update is called once per frame
     void Update()
     {
-
 
         textoVida.text = vida.ToString();
 
@@ -69,8 +62,11 @@ public class Jugador : MonoBehaviour
         {
             Instantiate(balaObj, mira.position, mira.localRotation);
         }
-    }
 
+        pjAnimator.SetFloat("Vertical", moveY);
+        pjAnimator.SetFloat("speed", moveInput.sqrMagnitude);
+        Debug.Log(moveInput.sqrMagnitude);
+    }
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput * speed * Time.deltaTime);
