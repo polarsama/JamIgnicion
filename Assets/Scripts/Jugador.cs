@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Jugador : MonoBehaviour
 {
@@ -10,10 +10,9 @@ public class Jugador : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private GameObject balaObj;
     [SerializeField] private Transform mira;
-    [SerializeField] private float vida;
     [SerializeField] private GameObject explosion;
-    [SerializeField] private Text textoVida;
-
+    
+    private TextMeshProUGUI textMesh;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator pjAnimator;
@@ -24,7 +23,7 @@ public class Jugador : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         pjAnimator = GetComponent<Animator>();
-        textoVida.text = vida.ToString();
+        textMesh = GetComponent<TextMeshProUGUI>();
     }
 
 
@@ -34,8 +33,6 @@ public class Jugador : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemigo")
         {
-            vida = 0;
-
             Destroy(collision.gameObject);
 
             Instantiate(explosion, collision.transform.position, collision.transform.rotation);
@@ -52,7 +49,7 @@ public class Jugador : MonoBehaviour
     void Update()
     {
 
-        textoVida.text = vida.ToString();
+        //textMesh.text = vida.ToString("100");
 
         float moveY = Input.GetAxisRaw("Vertical");
 
