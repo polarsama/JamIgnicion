@@ -60,7 +60,7 @@ public class Jugador : MonoBehaviour
             Instantiate(balaObj, mira.position, mira.localRotation);
         }
 
-        pjAnimator.SetFloat("Vertical", Mathf.Abs(moveY));
+        //pjAnimator.SetFloat("Vertical", Mathf.Abs(moveY));
         //pjAnimator.SetFloat("speed", Mathf.Abs(moveY));
     }
 
