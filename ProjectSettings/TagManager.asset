@@ -9,11 +9,12 @@ TagManager:
   - Enemigo
   - Asteroide
   - Bala
+  - Fondo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Fondo
   - Water
   - UI
   - Enemigos
