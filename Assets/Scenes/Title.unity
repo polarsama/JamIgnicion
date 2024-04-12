@@ -1617,15 +1617,15 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279116256
-  m_fontColor: {r: 0.8773585, g: 0.12978163, b: 0.053800307, a: 1}
+    rgba: 4294907820
+  m_fontColor: {r: 0.67284656, g: 0.08962262, b: 1, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 0.764151, g: 0.53287387, b: 0.26312745, a: 1}
-    topRight: {r: 0.4056604, g: 0.06314526, b: 0.06314526, a: 1}
-    bottomLeft: {r: 1, g: 0.1462264, b: 0.1462264, a: 1}
-    bottomRight: {r: 0.9811321, g: 0.9487362, b: 0.9487362, a: 1}
+    topLeft: {r: 0.7385529, g: 0.26274514, b: 0.7647059, a: 1}
+    topRight: {r: 0.40392157, g: 0.06274509, b: 0.39210606, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 0.857828, g: 0.5235849, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
