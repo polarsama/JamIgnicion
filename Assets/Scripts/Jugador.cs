@@ -11,11 +11,13 @@ public class Jugador : MonoBehaviour
     [SerializeField] private GameObject balaObj;
     [SerializeField] private Transform mira;
     [SerializeField] private GameObject explosion;
-    
+    private int vida;
+
     private TextMeshProUGUI textMesh;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator pjAnimator;
+   
 
 
     // Start is called before the first frame update
@@ -59,9 +61,6 @@ public class Jugador : MonoBehaviour
         {
             Instantiate(balaObj, mira.position, mira.localRotation);
         }
-
-        //pjAnimator.SetFloat("Vertical", Mathf.Abs(moveY));
-        //pjAnimator.SetFloat("speed", Mathf.Abs(moveY));
     }
 
 
