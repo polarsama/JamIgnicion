@@ -11,7 +11,7 @@ public class Jugador : MonoBehaviour
     [SerializeField] private GameObject balaObj;
     [SerializeField] private Transform mira;
     [SerializeField] private GameObject explosion;
-    private int vida;
+    [SerializeField] private int vida;
 
     private TextMeshProUGUI textMesh;
     private Rigidbody2D rb;
