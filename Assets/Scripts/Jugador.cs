@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class Jugador : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class Jugador : MonoBehaviour
     [SerializeField] private GameObject explosion;
     [SerializeField] private int vida;
 
-    private TextMeshProUGUI textMesh;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator pjAnimator;
@@ -25,7 +23,6 @@ public class Jugador : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         pjAnimator = GetComponent<Animator>();
-        textMesh = GetComponent<TextMeshProUGUI>();
     }
 
 
@@ -50,8 +47,6 @@ public class Jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //textMesh.text = vida.ToString("100");
 
         float moveY = Input.GetAxisRaw("Vertical");
 

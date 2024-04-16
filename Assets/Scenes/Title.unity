@@ -951,9 +951,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Assets usados de la tienda de unity gratuitamente, por tal motivo este
     juego no monetizara.  A continuaci\xF3n dejo en claro los nombres de los creadores
-    de los assets y el pack de assets usado:\n\nJosh Marshall (Galaxia 2D Space Shooter
-    Sprite Pack #1)\nAnsimuz (Warped Space Shooter)\nJean Moreno (Cartoon FX Remaster
-    Free)\n\nMusica y programaci\xF3n realizada por mi autoria :\nPolalsx\n\n"
+    de los assets y el pack de assets usado:\n\nAnsimuz (Warped Space Shooter)\nJean
+    Moreno (Cartoon FX Remaster Free)\n\nMusica y programaci\xF3n realizada por mi
+    autoria :\nPolalsx\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 43.1
+  m_fontSize: 47.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
