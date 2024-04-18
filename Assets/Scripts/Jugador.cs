@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Jugador : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Jugador : MonoBehaviour
     [SerializeField] private Transform mira;
     [SerializeField] private GameObject explosion;
     [SerializeField] private int vida;
+
+    public event EventHandler MuerteJugador;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -32,9 +35,10 @@ public class Jugador : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemigo")
         {
-            Destroy(collision.gameObject);
+            MuerteJugador?.Invoke(this,EventArgs.Empty);   
 
             Instantiate(explosion, collision.transform.position, collision.transform.rotation);
+            Destroy(collision.gameObject);           
 
         }
 
