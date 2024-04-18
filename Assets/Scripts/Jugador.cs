@@ -29,7 +29,7 @@ public class Jugador : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
 
 
@@ -41,10 +41,6 @@ public class Jugador : MonoBehaviour
             Destroy(collision.gameObject);           
 
         }
-
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
 
     }
 

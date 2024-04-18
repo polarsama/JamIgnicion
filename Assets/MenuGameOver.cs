@@ -8,15 +8,15 @@ public class MenuGameOver : MonoBehaviour
 {
     [SerializeField] private GameObject menuGameOver;
 
-    private Jugador jugador;
+    private Jugador jugadorS;
 
     private void Start()
     {
-        jugador = GameObject.FindGameObjectsWithTag("Jugador").GetComponent<Jugador>();
-        jugador.MuerteJugador += ActivarMenu;
+        jugadorS = GameObject.FindGameObjectsWithTag("Jugador").GetComponent<Jugador>();
+        jugadorS.MuerteJugador += ActivarMenu;
     }
 
-    private void ActivarMenu()
+    private void ActivarMenu(object sender, EventArgs e)
     {
         menuGameOver.SetActive(true);
     }
