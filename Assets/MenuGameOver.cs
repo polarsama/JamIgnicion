@@ -12,13 +12,14 @@ public class MenuGameOver : MonoBehaviour
 
     private void Start()
     {
-        jugadorS = GameObject.FindGameObjectsWithTag("Jugador").GetComponent<Jugador>();
+        jugadorS = GameObject.FindGameObjectWithTag("Jugador").GetComponent<Jugador>();
         jugadorS.MuerteJugador += ActivarMenu;
     }
 
     private void ActivarMenu(object sender, EventArgs e)
     {
         menuGameOver.SetActive(true);
+        Time.timeScale = 0.5f;
     }
 
     public void Reiniciar()

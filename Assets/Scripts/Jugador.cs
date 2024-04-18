@@ -17,7 +17,7 @@ public class Jugador : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private Animator pjAnimator;
+   // private Animator pjAnimator;
    
 
 
@@ -25,7 +25,7 @@ public class Jugador : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        pjAnimator = GetComponent<Animator>();
+        //pjAnimator = GetComponent<Animator>();
     }
 
 
