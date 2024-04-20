@@ -25,6 +25,7 @@ public class MenuGameOver : MonoBehaviour
     public void Reiniciar()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 
     public void MenuInicial()

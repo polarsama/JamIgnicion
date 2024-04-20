@@ -53,13 +53,11 @@ public class Jugador : MonoBehaviour
         moveInput = new Vector2(0, moveY);
 
 
-        if (!MenuPausa.isPausa) { 
-            if (Input.GetMouseButtonDown(0))
-            {
-                Instantiate(balaObj, mira.position, mira.localRotation);
-            }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(balaObj, mira.position, mira.localRotation);
         }
-    }
+     }
 
 
     private void FixedUpdate()
