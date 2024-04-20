@@ -27,9 +27,9 @@ public class MenuGameOver : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void MenuInicial(string nombre)
+    public void MenuInicial()
     {
-        SceneManager.LoadScene(nombre);
+        SceneManager.LoadScene("title");
     }
 
     public void Salir()
