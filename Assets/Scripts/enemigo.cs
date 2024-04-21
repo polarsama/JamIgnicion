@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class scri : MonoBehaviour
 {
@@ -34,7 +33,6 @@ public class scri : MonoBehaviour
 
         if (collision.gameObject.tag == "Bala")
         {
-            clip.Play();
             ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);           
             Destroy(collision.gameObject);
             
@@ -42,7 +40,6 @@ public class scri : MonoBehaviour
 
         if (collision.gameObject.tag == "Jugador")
         {
-            clip.Play();
             Destroy(collision.gameObject);
             Instantiate(explosion, collision.transform.position, collision.transform.rotation);
 

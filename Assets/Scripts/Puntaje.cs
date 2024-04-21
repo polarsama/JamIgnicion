@@ -7,7 +7,7 @@ using TMPro;
 public class Puntaje : MonoBehaviour
 {
 
-    private float puntos;
+
 
     public TextMeshProUGUI textMesh;
 
@@ -15,19 +15,24 @@ public class Puntaje : MonoBehaviour
     void Start()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
-        textMesh.text = PlayerPrefs.GetInt("Maximo").ToString();
+        ControladorPuntos.Instance.sumarPuntosEvnt += CambiarTexto;
+    }
+
+    public void CambiarTexto(object sender, ControladorPuntos.SumarPuntosEventArgs e)
+    {
+        textMesh.text = e.PuntajeActualEvnt.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
    
-        textMesh.text = puntos.ToString("0");
+        //textMesh.text = puntos.ToString("0");
     
     }
 
-    public void SumarPuntos(float puntosEntrada)
-    {
-        puntos += puntosEntrada;
-    }
+    //public void SumarPuntos(float puntosEntrada)
+    //{
+    //    puntos += puntosEntrada;
+    //}
 }

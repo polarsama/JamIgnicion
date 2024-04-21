@@ -187,7 +187,7 @@ MonoBehaviour:
   speed: 1.5
   miTransf: {fileID: 5503658548965530144}
   explosion: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1, type: 3}
-  cantidadPuntos: 100
+  cantidadPuntos: 50
   clip: {fileID: 2623247479363011714}
 --- !u!82 &2623247479363011714
 AudioSource:
@@ -201,7 +201,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e57891be0dac3784a868364cc423d159, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.08
   m_Pitch: 1
   Loop: 0
   Mute: 0
