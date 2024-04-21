@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Audio;
 
 public class Jugador : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Jugador : MonoBehaviour
     [SerializeField] private Transform mira;
     [SerializeField] private GameObject explosion;
     [SerializeField] private int vida;
+    [SerializeField] private AudioSource clip;
 
     public event EventHandler MuerteJugador;
 
@@ -35,8 +37,7 @@ public class Jugador : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemigo")
         {
-            MuerteJugador?.Invoke(this,EventArgs.Empty);   
-
+            MuerteJugador?.Invoke(this,EventArgs.Empty);
             Instantiate(explosion, collision.transform.position, collision.transform.rotation);
             Destroy(collision.gameObject);           
 
@@ -55,6 +56,7 @@ public class Jugador : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            clip.Play();
             Instantiate(balaObj, mira.position, mira.localRotation);
         }
      }

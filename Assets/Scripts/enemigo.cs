@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class scri : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class scri : MonoBehaviour
     [SerializeField] private Transform miTransf;
     [SerializeField] private GameObject explosion;
     [SerializeField] private float cantidadPuntos;
+    [SerializeField] private AudioSource clip;   
     
     public Puntaje puntaje;
 
@@ -35,15 +37,16 @@ public class scri : MonoBehaviour
 
         if (collision.gameObject.tag == "Bala")
         {
-            puntaje.SumarPuntos(cantidadPuntos);
+            clip.Play();
+            puntaje.SumarPuntos(cantidadPuntos);            
             Destroy(collision.gameObject);
+            
         }
 
         if (collision.gameObject.tag == "Jugador")
         {
-
+            clip.Play();
             Destroy(collision.gameObject);
-
             Instantiate(explosion, collision.transform.position, collision.transform.rotation);
 
         }
