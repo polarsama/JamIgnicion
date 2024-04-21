@@ -9,11 +9,8 @@ public class scri : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Transform miTransf;
     [SerializeField] private GameObject explosion;
-    [SerializeField] private float cantidadPuntos;
+    [SerializeField] private int cantidadPuntos;
     [SerializeField] private AudioSource clip;   
-    
-    public Puntaje puntaje;
-
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +35,7 @@ public class scri : MonoBehaviour
         if (collision.gameObject.tag == "Bala")
         {
             clip.Play();
-            puntaje.SumarPuntos(cantidadPuntos);            
+            ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);           
             Destroy(collision.gameObject);
             
         }

@@ -15,13 +15,15 @@ public class Puntaje : MonoBehaviour
     void Start()
     {
         textMesh = GetComponent<TextMeshProUGUI>();
+        textMesh.text = PlayerPrefs.GetInt("Maximo").ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //puntos += Time.deltaTime;
+   
         textMesh.text = puntos.ToString("0");
+    
     }
 
     public void SumarPuntos(float puntosEntrada)
