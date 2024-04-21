@@ -23,16 +23,12 @@ public class Puntaje : MonoBehaviour
         textMesh.text = e.PuntajeActualEvnt.ToString();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
    
-        //textMesh.text = puntos.ToString("0");
-    
+        
     }
 
-    //public void SumarPuntos(float puntosEntrada)
-    //{
-    //    puntos += puntosEntrada;
-    //}
+   
 }
