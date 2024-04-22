@@ -14,12 +14,14 @@ public class GenerarEnemigos : MonoBehaviour
     public Transform xGeneratorRight;
 
     public GameObject enemigos;
-    public float TimeSpawn = 1;
-    public float SpawnTime = 2.5f;
+    public float TimeSpawn = 3;
+    public float SpawnTime = 5f;
+
 
     // Start is called before the first frame update
     void Start()
-    { 
+    {
+        Time.timeScale = 1f;
         InvokeRepeating("Generar", TimeSpawn, SpawnTime);
     }
 
@@ -31,4 +33,5 @@ public class GenerarEnemigos : MonoBehaviour
 
         Instantiate(enemigos, spawnPosition, gameObject.transform.rotation);
     }
+
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,10 @@ public class scri : MonoBehaviour
     [SerializeField] private Transform miTransf;
     [SerializeField] private GameObject explosion;
     [SerializeField] private int cantidadPuntos;
-    [SerializeField] private AudioSource clip;   
+    [SerializeField] private AudioSource clip;
+    public float IncrementoSpeed;
+    public float LapsoNivel;
+    public float IncrementoLapso;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +24,14 @@ public class scri : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Time.timeScale = 1f;
         miTransf.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * speed);
+
+        if (Time.time > LapsoNivel)
+        {
+            speed += IncrementoSpeed;
+            LapsoNivel += IncrementoLapso;
+        }
     }
     private void OnBecameInvisible()
     {
