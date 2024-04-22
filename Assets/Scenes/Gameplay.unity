@@ -1048,6 +1048,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: {x: 0.09, y: 0}
+  IncrementoSpeed: 0.1
+  LapsoNivel: 30
+  IncrementoLapso: 30
 --- !u!1 &414502852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,7 +1534,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 629355299}
-  - component: {fileID: 629355298}
+  - component: {fileID: 629355300}
+  - component: {fileID: 629355301}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -1539,7 +1543,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &629355298
+--- !u!4 &629355299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629355297}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &629355300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629355297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04aab09cd2a0bb840a2c643fe13d4e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  songs:
+  - {fileID: 8300000, guid: bf490bc39bdac974d8a8fad235786539, type: 3}
+  - {fileID: 8300000, guid: f79f78016e46fa942b7716faa9c1ac2c, type: 3}
+  - {fileID: 8300000, guid: 6d88481ca2c1f6c4dbc187c71feb5bda, type: 3}
+  Tiempo: 0
+--- !u!82 &629355301
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1549,15 +1585,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bf490bc39bdac974d8a8fad235786539, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 167
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1635,21 +1671,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &629355299
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 629355297}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &692838501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3309,6 +3330,9 @@ MonoBehaviour:
   enemigos: {fileID: 1990775861394623642, guid: 21264aa64d897d442984549438e1f21c, type: 3}
   TimeSpawn: 1
   SpawnTime: 0.5
+  IncrementoSpawn: -0.3
+  LapsoNivel: 30
+  IncrementoLapso: 30
 --- !u!4 &1764143215
 Transform:
   m_ObjectHideFlags: 0
@@ -3426,6 +3450,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: {x: 0.03, y: 0}
+  IncrementoSpeed: 0.07
+  LapsoNivel: 30
+  IncrementoLapso: 30
 --- !u!1 &1883500463
 GameObject:
   m_ObjectHideFlags: 0
