@@ -14,6 +14,7 @@ public class ControladorPuntos : MonoBehaviour
     public class SumarPuntosEventArgs: EventArgs
     {
         public int PuntajeActualEvnt;
+        public int PuntajeMaximoEvnt;
     }
 
     private void Awake()
@@ -41,7 +42,7 @@ public class ControladorPuntos : MonoBehaviour
             PlayerPrefs.SetInt("Maximo", PuntajeMaximo);
         }
 
-        sumarPuntosEvnt?.Invoke(this, new SumarPuntosEventArgs { PuntajeActualEvnt = PuntajeActual });
+        sumarPuntosEvnt?.Invoke(this, new SumarPuntosEventArgs { PuntajeActualEvnt = PuntajeActual, PuntajeMaximoEvnt = PuntajeMaximo });
     }
 
 
