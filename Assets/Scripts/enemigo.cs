@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scri : MonoBehaviour
+public class Enemigos : MonoBehaviour
 {
 
     [SerializeField] private float speed;
@@ -11,27 +11,20 @@ public class scri : MonoBehaviour
     [SerializeField] private GameObject explosion;
     [SerializeField] private int cantidadPuntos;
     [SerializeField] private AudioSource clip;
-    public float IncrementoSpeed;
-    public float LapsoNivel;
-    public float IncrementoLapso;
+
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale = 1f;
+
         miTransf.Translate(new Vector3(-1, 0, 0) * Time.deltaTime * speed);
 
-        if (Time.time > LapsoNivel)
-        {
-            speed += IncrementoSpeed;
-            LapsoNivel += IncrementoLapso;
-        }
     }
     private void OnBecameInvisible()
     {
@@ -46,7 +39,7 @@ public class scri : MonoBehaviour
         {
             ControladorPuntos.Instance.SumarPuntos(cantidadPuntos);           
             Destroy(collision.gameObject);
-            
+
         }
 
         if (collision.gameObject.tag == "Jugador")

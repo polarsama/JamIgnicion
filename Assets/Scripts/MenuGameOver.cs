@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using System.ComponentModel;
 
 public class MenuGameOver : MonoBehaviour
 {

@@ -16,12 +16,13 @@ public class GenerarEnemigos : MonoBehaviour
     public GameObject enemigos;
     public float TimeSpawn = 3;
     public float SpawnTime = 5f;
-
+    public float IncrementoSpawn;
+    public float LapsoNivel;
+    public float IncrementoLapso;
 
     // Start is called before the first frame update
     void Start()
-    {
-        Time.timeScale = 1f;
+    { 
         InvokeRepeating("Generar", TimeSpawn, SpawnTime);
     }
 
@@ -34,4 +35,13 @@ public class GenerarEnemigos : MonoBehaviour
         Instantiate(enemigos, spawnPosition, gameObject.transform.rotation);
     }
 
+    private void Update()
+    {
+        if(Time.time > LapsoNivel)
+        {
+            SpawnTime -= Random.Range(IncrementoSpawn, -0.1f);
+            TimeSpawn -= Random.Range(IncrementoSpawn, -0.1f);
+            LapsoNivel += IncrementoLapso;
+        }
+    }
 }
