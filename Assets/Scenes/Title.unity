@@ -829,8 +829,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Utrilizas W para ir hac\xEDa arriba y S para ir hac\xEDa abajo.\n\nTambi\xE9n
-    se peude usar las flechas arriba y abajo para mover la nave.\n\nPara disparar
-    usas el clic derecho del mouse para que salgan los disparos y destruyas los enemigos."
+    se puede usar las flechas arriba y abajo para mover la nave.\n\nPara disparar
+    usas el clic izquierdo del mouse para que salgan los disparos y destruyas los
+    enemigos."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3896,7 +3897,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CRONTOLES
+  m_text: CONTROLES
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 162512a810daa2241bec7269802234b4, type: 2}
   m_sharedMaterial: {fileID: -2816780569378455346, guid: 162512a810daa2241bec7269802234b4, type: 2}
